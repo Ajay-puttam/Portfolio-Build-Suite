@@ -48,8 +48,8 @@ function TechTag({ label }: { label: string }) {
       className="px-2 py-0.5 rounded text-xs"
       style={{
         fontFamily: "monospace",
-        backgroundColor: "rgba(124,58,237,0.12)",
-        border: "1px solid rgba(124,58,237,0.25)",
+        backgroundColor: "rgba(245,166,35,0.1)",
+        border: "1px solid rgba(245,166,35,0.22)",
         color: "var(--brand-light)",
       }}
     >
@@ -121,8 +121,8 @@ export default function Projects() {
               }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLDivElement).style.boxShadow =
-                  "0 0 30px rgba(124,58,237,0.08)";
-                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(124,58,237,0.4)";
+                  "0 0 30px rgba(245,166,35,0.08)";
+                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(245,166,35,0.35)";
                 (e.currentTarget as HTMLDivElement).style.borderLeftColor = "var(--brand)";
               }}
               onMouseLeave={(e) => {
@@ -185,17 +185,17 @@ export default function Projects() {
                   className="text-xs px-3 py-1.5 rounded-lg transition-all duration-200 font-medium"
                   style={{
                     fontFamily: "var(--app-font-body)",
-                    backgroundColor: "rgba(124,58,237,0.12)",
-                    border: "1px solid rgba(124,58,237,0.25)",
+                    backgroundColor: "rgba(245,166,35,0.1)",
+                    border: "1px solid rgba(245,166,35,0.22)",
                     color: "var(--brand-light)",
                   }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                      "rgba(124,58,237,0.25)";
+                      "rgba(245,166,35,0.22)";
                   }}
                   onMouseLeave={(e) => {
                     (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                      "rgba(124,58,237,0.12)";
+                      "rgba(245,166,35,0.1)";
                   }}
                 >
                   GitHub ↗
