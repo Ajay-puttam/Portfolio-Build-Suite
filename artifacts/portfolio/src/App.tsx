@@ -6,6 +6,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import SkillsStrip from "@/components/SkillsStrip";
 import About from "@/components/About";
+import CreativeWork from "@/components/CreativeWork";
+import Projects from "@/components/Projects";
+import Leadership from "@/components/Leadership";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -16,6 +19,9 @@ function Home() {
       <Hero />
       <SkillsStrip />
       <About />
+      <CreativeWork />
+      <Projects />
+      <Leadership />
     </main>
   );
 }

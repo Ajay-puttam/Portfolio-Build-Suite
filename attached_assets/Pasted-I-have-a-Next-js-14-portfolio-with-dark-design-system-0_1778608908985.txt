@@ -1,0 +1,97 @@
+I have a Next.js 14 portfolio with dark design system (#0A0A0F bg, Syne/Inter fonts, brand purple #7C3AED), Hero, About, and Skills sections already built. Now add: Creative Work section, AI Projects section, and Leadership section.
+
+---
+
+CREATIVE WORK SECTION (components/CreativeWork.tsx):
+
+This showcases my graphic design, social media content, and visual work.
+
+Section header:
+- Small label: "Creative Work" in brand purple, tracking-widest, small caps
+- Large Syne heading: "Visuals that stop the scroll."
+- Sub-text: "Posters, social creatives, brand content and AI-generated visuals."
+
+Layout: Asymmetric bento-box grid
+- Row 1: one large card (col-span-2) + one tall card
+- Row 2: two medium cards + one wide card
+- Each card is dark glassmorphism style (bg #111118, border #1E1E2E, rounded-2xl)
+
+Each card structure:
+- bg-surface-card background
+- A placeholder area (aspect-ratio box with gradient placeholder — use bg-gradient-to-br from purple to dark, or from-violet-900 to-slate-900) simulating a design mockup
+- Bottom section: card title (Syne, medium), category tag pill (e.g. "Poster Design", "Social Creative", "Brand Visual"), and a small "→" link
+- Hover: scale up slightly (1.02), border changes to brand purple opacity 50%, smooth transition
+
+Cards to create (use these titles and categories):
+1. "DevCatalyst Event Series" — Poster Design — large card
+2. "Ammonium_Cyanide Content" — Social Media — tall card
+3. "Tech Fest Banner Collection" — Event Branding
+4. "AI-Generated Campaign Visual" — AI Visual
+5. "Club Social Media Pack" — Brand Identity
+
+Add a "View all work →" text link below the grid in brand purple.
+
+---
+
+AI PROJECTS SECTION (components/Projects.tsx):
+
+This showcases technical/AI projects — presented creatively, not like a typical resume.
+
+Section header:
+- Small label: "Built with AI" 
+- Large Syne heading: "Where code meets intelligence."
+
+Layout: Vertical list of project cards (full-width on mobile, contained max-w-4xl centered)
+
+Each project card:
+- Dark card, left border accent in brand purple (4px solid)
+- Left: project number (01, 02...) in very large Syne font, text-muted, opacity 20% — decorative
+- Center: project title in Syne medium, description in Inter small text-secondary, tech tags as mini pills
+- Right: a small icon area (use emoji or a simple SVG shape as placeholder), and a GitHub/external link button
+
+Projects to include:
+1. "AI Traffic Management System" — "Adaptive signal control using computer vision and real-time data processing." — Tags: Python, OpenCV, AI
+2. "PDF Chatbot" — "Upload any PDF and have a conversation with its contents using HuggingFace LLMs." — Tags: HuggingFace, Streamlit, NLP
+3. "Internship Recommendation Engine" — "Matches students to internships based on skills and preferences using ML scoring." — Tags: Python, ML, Streamlit
+4. "AI PDF Summarizer" — "Instant intelligent summaries of long documents." — Tags: LLM, NLP, Python
+5. "Blood Donor Matcher" — "Real-time matching system between donors and recipients." — Tags: Python, Backend
+
+Each project animates in from the right with Framer Motion staggered delays on scroll.
+
+---
+
+LEADERSHIP SECTION (components/Leadership.tsx):
+
+A single-focus section that shows creative leadership without being boring.
+
+Layout: Two large side-by-side cards on desktop, stacked mobile
+
+Card 1 — DevCatalyst:
+- Title: "Design & Video Head, DevCatalyst"
+- Subtitle: "Student Technical Club, Matrusri Engineering College"
+- Body: Led the graphic design and video editing team. Produced event visuals, promotional content, and brand identity for the club's technical events. 
+- Bottom stats: "2 Years" · "Team Lead" · "15+ Events"
+- Visual accent: thin horizontal gradient line at top of card in brand purple
+
+Card 2 — Ammonium_Cyanide:
+- Title: "Co-Admin & Creative Lead"
+- Subtitle: "Education + Entertainment Meme Page"
+- Body: Built and grew a cross-platform content brand to 40K+ followers. Created viral educational content blending internet culture with real value. Multiple videos crossing 1M+ views.
+- Bottom stats: "40K+ Followers" · "5M+ Views" · "Viral Content"
+- Visual accent: thin gradient line in teal/green
+
+Both cards:
+- Dark glassmorphism, rounded-2xl
+- Subtle glow on hover
+- Stagger animation on scroll using Framer Motion
+
+---
+
+Update app/page.tsx to add sections in this order after About:
+CreativeWork → Projects → Leadership
+
+Give me:
+1. components/CreativeWork.tsx
+2. components/Projects.tsx
+3. components/Leadership.tsx
+4. Updated app/page.tsx
