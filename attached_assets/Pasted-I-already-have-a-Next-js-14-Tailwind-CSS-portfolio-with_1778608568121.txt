@@ -1,0 +1,84 @@
+I already have a Next.js 14 + Tailwind CSS portfolio with the design system set up (dark bg #0A0A0F, Syne display font, Inter body font, brand purple #7C3AED). Now build the Hero section, About section, and a Skills/Tools strip for app/page.tsx.
+
+ABOUT ME (use this to write the actual copy):
+Name: [Your Name]
+Title: Creative AI Technologist
+Identity: Final-year CSE student, graphic design + video editing team head, AI/NLP project builder, meme page co-admin with 40k+ followers and 5M+ viral views
+Applying for: AI Visual Designer / AI Video Creator roles at a Creative AI Production company
+Tone: Modern, confident, internet-native, not corporate
+
+---
+
+HERO SECTION (components/Hero.tsx):
+
+Layout: Full viewport height (100vh), centered, dark background
+
+Top element:
+- Subtle animated badge/pill: small text "Available for creative AI roles" with a pulsing dot — use brand purple bg with low opacity + border
+
+Main headline (Syne font, very large — text-6xl md:text-8xl, font-extrabold):
+Line 1: "Creative."
+Line 2: "Technical."
+Line 3: "AI-Native."
+Each word on its own line, staggered fade-up animation using Framer Motion (delay 0.1s between each)
+
+Sub-headline (Inter, text-xl, text-secondary):
+"I build at the intersection of AI, design, and internet culture."
+
+Two CTA buttons:
+- Primary: "View My Work" — solid brand purple, slight glow on hover, pill shape
+- Secondary: "Let's Talk" — outlined, ghost style, same pill shape
+
+Bottom of hero: animated scroll indicator (chevron down, bouncing)
+
+Ambient background elements:
+- One large radial gradient glow behind the text (brand purple, very low opacity ~0.15, blurred)
+- Subtle grid pattern overlay (CSS background-image grid, very faint, #1E1E2E lines)
+- Do NOT use particles or heavy canvas animations
+
+Framer Motion:
+- All text elements use variants with staggerChildren
+- Container animates on mount
+- Use useInView for scroll-triggered animations (not just on load)
+
+---
+
+ABOUT SECTION (components/About.tsx):
+
+Layout: Two-column on desktop (60/40 split), stacked on mobile
+
+Left column:
+- Section label: small caps text "About me" in brand purple, Inter, tracking-widest
+- Large heading in Syne: "Not just an engineer. A builder of experiences."
+- Body paragraph (2–3 sentences): write this using my background — hybrid between code, design, AI and internet culture. DevCatalyst team head, Ammonium_Cyanide co-admin, AI/NLP project builder.
+- Second paragraph: positioning for creative AI roles — mention I understand virality, aesthetics, and systems thinking
+- Two inline stat items below: "40K+ Followers" and "5M+ Views" — styled as minimal dark cards with glowing border
+
+Right column:
+- Decorative card: dark glassmorphism card (bg semi-transparent, backdrop-blur, border brand surface)
+- Inside: stacked role tags as pill badges in purple/muted colors: "AI Visual Designer", "Video Creator", "NLP Builder", "Content Strategist", "Creative Lead"
+- Below those: a subtle grid of tool logos (text-only, no images): Canva, CapCut, Adobe Firefly, Streamlit, HuggingFace, ElevenLabs — styled as monospace small tags
+
+---
+
+SKILLS STRIP (components/SkillsStrip.tsx):
+
+Full-width horizontal strip
+Dark bg (#111118), subtle top and bottom 1px border (#1E1E2E)
+Content: auto-scrolling marquee of skills/tools (use CSS animation, no JS library needed):
+"AI Visual Design · Video Editing · Prompt Engineering · NLP · Branding · Social Media · Reels · UGC · Streamlit · HuggingFace · Adobe Firefly · CapCut · Canva · ElevenLabs · Content Systems · Viral Content · Motion Graphics"
+Each item separated by a small brand purple dot
+Text in Inter, small, text-secondary
+Duplicate content for seamless loop
+
+---
+
+Wire everything into app/page.tsx in this order: Hero → SkillsStrip → About
+
+Use Framer Motion's AnimatePresence and motion.div with viewport detection throughout.
+
+Give me:
+1. components/Hero.tsx
+2. components/About.tsx
+3. components/SkillsStrip.tsx
+4. Updated app/page.tsx
