@@ -1,0 +1,80 @@
+I have a complete Next.js 14 dark portfolio (Hero, About, Skills Strip, Creative Work, Projects, Leadership). Now add the Contact section, Footer, page-level polish, and Vercel deployment setup.
+
+---
+
+CONTACT SECTION (components/Contact.tsx):
+
+Layout: Centered, max-w-2xl, generous padding
+
+Top: Section label "Let's Build" in brand purple
+Large Syne heading (text-5xl): "Have a project in mind? I'm available."
+Sub-text: "Reach out for creative AI roles, design collaborations, or just to connect."
+
+Contact options as three horizontal cards (dark surface, border, rounded-xl):
+1. Email card — icon placeholder (envelope) + "Mail me" label + email address (placeholder: hello@yourname.com)
+2. LinkedIn card — icon + "Connect" label + linkedin.com/in/yourprofile
+3. GitHub card — icon + "See Code" label + github.com/yourusername
+
+Each card: hover lifts slightly, border transitions to brand purple
+
+Below cards: a single CTA button — "Download Resume" — outlined style, brand purple, downloads a PDF
+
+---
+
+FOOTER (components/Footer.tsx):
+
+Minimal, dark
+- Left: "© 2025 [Your Name]. Built with Next.js & Framer Motion."
+- Center: small text "Creative AI Technologist · Hyderabad, India"
+- Right: small social icon links (text-only or minimal SVG) — GitHub, LinkedIn, Instagram
+- Top border: 1px, #1E1E2E
+
+---
+
+FINAL POLISH — apply these globally:
+
+1. Smooth section transitions:
+Add a subtle section divider between all major sections — a thin horizontal line with a centered brand purple dot, or a gradient fade
+
+2. Cursor (desktop only):
+Add a custom cursor component (components/CustomCursor.tsx):
+- Small circle that follows mouse position
+- Slightly larger ring that follows with lag (magnetic effect)
+- Both in brand purple
+- Hides on mobile/touch devices
+- Use useMousePosition hook
+
+3. Page loading:
+Add a minimal loading screen (components/Loader.tsx):
+- Shows on first load for ~1.2s
+- Just the letter "V." in large Syne font, animates in and out
+- Fades out to reveal the page
+
+4. SEO metadata (update app/layout.tsx):
+Add full OpenGraph metadata — og:title, og:description, og:image placeholder, twitter:card
+
+5. Vercel deployment:
+Create a vercel.json with these settings:
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next"
+}
+
+Also update package.json scripts if needed.
+
+6. Performance:
+- Add next.config.js with image optimization enabled
+- Add loading="lazy" to any image components
+- Ensure no layout shift on font load (use font-display: swap)
+
+Give me:
+1. components/Contact.tsx
+2. components/Footer.tsx
+3. components/CustomCursor.tsx
+4. components/Loader.tsx
+5. hooks/useMousePosition.ts
+6. Updated app/layout.tsx with full SEO
+7. vercel.json
+8. next.config.js
+9. Final updated app/page.tsx (complete, with all sections + Loader + CustomCursor)

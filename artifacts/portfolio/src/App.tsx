@@ -9,6 +9,11 @@ import About from "@/components/About";
 import CreativeWork from "@/components/CreativeWork";
 import Projects from "@/components/Projects";
 import Leadership from "@/components/Leadership";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
+import Loader from "@/components/Loader";
+import SectionDivider from "@/components/SectionDivider";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -18,10 +23,17 @@ function Home() {
     <main style={{ backgroundColor: "var(--surface)" }}>
       <Hero />
       <SkillsStrip />
+      <SectionDivider />
       <About />
+      <SectionDivider />
       <CreativeWork />
+      <SectionDivider />
       <Projects />
+      <SectionDivider />
       <Leadership />
+      <SectionDivider />
+      <Contact />
+      <Footer />
     </main>
   );
 }
@@ -40,6 +52,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <Loader />
+          <CustomCursor />
           <Navbar />
           <Router />
         </WouterRouter>
