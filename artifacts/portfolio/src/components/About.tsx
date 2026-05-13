@@ -189,12 +189,40 @@ export default function About() {
 
         {/* ── RIGHT COLUMN — 2/5 ── */}
         <motion.div
-          className="lg:col-span-2 lg:pl-8 lg:border-l"
+          className="lg:col-span-2 lg:pl-8 lg:border-l flex flex-col gap-5"
           style={{ borderColor: "rgba(255,255,255,0.05)" }}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
         >
+          {/* Portrait — editorial, cinematic */}
+          <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+            <img
+              src="/ajay-portrait.png"
+              alt="Ajay Puttam"
+              className="w-full h-full object-cover object-top"
+              style={{
+                filter: "saturate(0.82) contrast(0.96) brightness(0.95)",
+              }}
+            />
+            {/* Bottom fade — blends into dark background */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent 55%, rgba(10,10,15,0.55) 80%, rgba(10,10,15,0.9) 100%)",
+              }}
+            />
+            {/* Subtle left-edge vignette to match the image's own light */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to right, transparent 70%, rgba(10,10,15,0.3) 100%)",
+              }}
+            />
+          </div>
+
           <div
             className="rounded-2xl p-6 flex flex-col gap-6"
             style={{
