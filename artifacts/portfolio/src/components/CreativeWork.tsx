@@ -5,36 +5,36 @@ const CARDS = [
   {
     title: "DevCatalyst Event Series",
     category: "Poster Design",
-    gradient: "from-amber-950 via-orange-950 to-stone-900",
-    accent: "#F5A623",
+    gradient: "from-violet-900 via-purple-900 to-slate-900",
+    accent: "#7C3AED",
     size: "large",
   },
   {
     title: "Ammonium_Cyanide Content",
     category: "Social Media",
-    gradient: "from-yellow-950 via-amber-950 to-stone-950",
-    accent: "#FFCA6B",
+    gradient: "from-indigo-900 via-violet-900 to-slate-950",
+    accent: "#A78BFA",
     size: "tall",
   },
   {
     title: "Tech Fest Banner Collection",
     category: "Event Branding",
-    gradient: "from-stone-900 via-amber-950 to-orange-950",
-    accent: "#F5A623",
+    gradient: "from-slate-900 via-purple-950 to-violet-900",
+    accent: "#7C3AED",
     size: "medium",
   },
   {
     title: "AI-Generated Campaign Visual",
     category: "AI Visual",
-    gradient: "from-orange-950 via-amber-950 to-stone-900",
-    accent: "#FFCA6B",
+    gradient: "from-violet-950 via-fuchsia-950 to-slate-900",
+    accent: "#A78BFA",
     size: "medium",
   },
   {
     title: "Club Social Media Pack",
     category: "Brand Identity",
-    gradient: "from-stone-950 via-yellow-950 to-amber-950",
-    accent: "#F5A623",
+    gradient: "from-slate-950 via-indigo-950 to-violet-900",
+    accent: "#7C3AED",
     size: "wide",
   },
 ];
@@ -105,7 +105,7 @@ function WorkCard({
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(245,166,35,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(245,166,35,0.2) 1px, transparent 1px)",
+              "linear-gradient(rgba(167,139,250,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(167,139,250,0.3) 1px, transparent 1px)",
             backgroundSize: "32px 32px",
           }}
         />

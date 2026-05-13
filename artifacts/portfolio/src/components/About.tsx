@@ -131,7 +131,7 @@ export default function About() {
                 style={{
                   backgroundColor: "var(--surface-card)",
                   border: "1px solid var(--surface-border)",
-                  boxShadow: "0 0 24px rgba(245, 166, 35, 0.08) inset",
+                  boxShadow: "0 0 24px rgba(124, 58, 237, 0.08) inset",
                 }}
               >
                 <span
@@ -168,12 +168,12 @@ export default function About() {
           <div
             className="rounded-2xl p-6 flex flex-col gap-6"
             style={{
-              backgroundColor: "rgba(19, 18, 9, 0.8)",
+              backgroundColor: "rgba(17, 17, 24, 0.7)",
               border: "1px solid var(--surface-border)",
               backdropFilter: "blur(16px)",
               WebkitBackdropFilter: "blur(16px)",
               boxShadow:
-                "0 0 40px rgba(245, 166, 35, 0.06), inset 0 1px 0 rgba(255,255,255,0.04)",
+                "0 0 40px rgba(124, 58, 237, 0.07), inset 0 1px 0 rgba(255,255,255,0.04)",
             }}
           >
             {/* Role tags */}
@@ -197,8 +197,8 @@ export default function About() {
                       fontFamily: "var(--app-font-body)",
                       backgroundColor:
                         i % 2 === 0
-                          ? "rgba(245, 166, 35, 0.12)"
-                          : "rgba(255, 202, 107, 0.08)",
+                          ? "rgba(124, 58, 237, 0.15)"
+                          : "rgba(167, 139, 250, 0.1)",
                       border: `1px solid ${color}40`,
                       color: color,
                     }}

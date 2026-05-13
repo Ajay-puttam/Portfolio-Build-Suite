@@ -18,7 +18,7 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: isScrolled ? "rgba(12, 11, 8, 0.88)" : "transparent",
+        backgroundColor: isScrolled ? "rgba(10, 10, 15, 0.85)" : "transparent",
         backdropFilter: isScrolled ? "blur(16px)" : "none",
         WebkitBackdropFilter: isScrolled ? "blur(16px)" : "none",
       }}
@@ -41,8 +41,8 @@ export default function Navbar() {
         <div
           className="hidden sm:flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium"
           style={{
-            backgroundColor: "rgba(30, 25, 10, 0.8)",
-            border: "1px solid rgba(245, 166, 35, 0.25)",
+            backgroundColor: "rgba(30, 30, 46, 0.8)",
+            border: "1px solid rgba(124, 58, 237, 0.25)",
             color: "var(--text-secondary)",
             fontFamily: "var(--app-font-body)",
           }}
@@ -108,7 +108,7 @@ export default function Navbar() {
             transition={{ duration: 0.2, ease: "easeInOut" }}
             className="overflow-hidden sm:hidden"
             style={{
-              backgroundColor: "rgba(12, 11, 8, 0.96)",
+              backgroundColor: "rgba(10, 10, 15, 0.95)",
               borderTop: "1px solid var(--surface-border)",
             }}
           >
@@ -118,8 +118,8 @@ export default function Navbar() {
                 <div
                   className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-2"
                   style={{
-                    backgroundColor: "rgba(30, 25, 10, 0.8)",
-                    border: "1px solid rgba(245, 166, 35, 0.25)",
+                    backgroundColor: "rgba(30, 30, 46, 0.8)",
+                    border: "1px solid rgba(124, 58, 237, 0.25)",
                     color: "var(--text-secondary)",
                   }}
                 >

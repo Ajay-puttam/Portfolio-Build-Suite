@@ -8,21 +8,21 @@ const CONTACT_CARDS = [
     label: "Mail me",
     value: "hello@varun.dev",
     href: "mailto:hello@varun.dev",
-    accent: "#F5A623",
+    accent: "#7C3AED",
   },
   {
     icon: Linkedin,
     label: "Connect",
     value: "linkedin.com/in/yourprofile",
     href: "https://linkedin.com/in/yourprofile",
-    accent: "#FFCA6B",
+    accent: "#A78BFA",
   },
   {
     icon: Github,
     label: "See Code",
     value: "github.com/yourusername",
     href: "https://github.com/yourusername",
-    accent: "#F5A623",
+    accent: "#7C3AED",
   },
 ];
 
@@ -163,9 +163,9 @@ export default function Contact() {
             }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                "rgba(245,166,35,0.1)";
+                "rgba(124,58,237,0.12)";
               (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                "0 0 24px rgba(245,166,35,0.3)";
+                "0 0 20px rgba(124,58,237,0.25)";
             }}
             onMouseLeave={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent";

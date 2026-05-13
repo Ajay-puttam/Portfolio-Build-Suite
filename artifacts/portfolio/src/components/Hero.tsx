@@ -39,7 +39,7 @@ export default function Hero() {
             height: "700px",
             borderRadius: "50%",
             background:
-              "radial-gradient(ellipse at center, rgba(245,166,35,0.12) 0%, rgba(245,166,35,0.03) 60%, transparent 100%)",
+              "radial-gradient(circle, rgba(124,58,237,0.18) 0%, rgba(124,58,237,0.04) 60%, transparent 100%)",
             filter: "blur(60px)",
             transform: "translateY(-60px)",
           }}
@@ -72,8 +72,8 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium tracking-wide uppercase"
               style={{
                 fontFamily: "var(--app-font-body)",
-                backgroundColor: "rgba(245, 166, 35, 0.1)",
-                border: "1px solid rgba(245, 166, 35, 0.3)",
+                backgroundColor: "rgba(124, 58, 237, 0.12)",
+                border: "1px solid rgba(124, 58, 237, 0.35)",
                 color: "var(--brand-light)",
                 letterSpacing: "0.1em",
               }}
@@ -135,18 +135,17 @@ export default function Hero() {
               style={{
                 fontFamily: "var(--app-font-body)",
                 backgroundColor: "var(--brand)",
-                color: "#0C0B08",
-                fontWeight: 600,
-                boxShadow: "0 0 0 0 rgba(245,166,35,0.4)",
+                color: "#ffffff",
+                boxShadow: "0 0 0 0 rgba(124,58,237,0.4)",
               }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                  "0 0 32px rgba(245,166,35,0.4)";
+                  "0 0 24px 6px rgba(124,58,237,0.45)";
                 (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                  "0 0 0 0 rgba(245,166,35,0.4)";
+                  "0 0 0 0 rgba(124,58,237,0.4)";
                 (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
               }}
             >

@@ -3,9 +3,9 @@ import { useRef } from "react";
 
 const CARDS = [
   {
-    gradient: "from-amber-600 via-orange-500 to-brand",
-    accentStart: "#F5A623",
-    accentEnd: "#FFCA6B",
+    gradient: "from-violet-600 via-purple-500 to-brand",
+    accentStart: "#7C3AED",
+    accentEnd: "#A78BFA",
     title: "Design & Video Head, DevCatalyst",
     subtitle: "Student Technical Club, Matrusri Engineering College",
     body: "Led the graphic design and video editing team through two years of technical events. Produced event visuals, promotional content, and brand identity materials that defined the club's presence on campus and online.",
@@ -14,8 +14,8 @@ const CARDS = [
       { value: "Team Lead", label: "Role" },
       { value: "15+ Events", label: "Covered" },
     ],
-    glowColor: "rgba(245,166,35,0.15)",
-    borderHover: "rgba(245,166,35,0.5)",
+    glowColor: "rgba(124,58,237,0.15)",
+    borderHover: "rgba(124,58,237,0.5)",
   },
   {
     gradient: "from-teal-500 via-emerald-500 to-cyan-400",
