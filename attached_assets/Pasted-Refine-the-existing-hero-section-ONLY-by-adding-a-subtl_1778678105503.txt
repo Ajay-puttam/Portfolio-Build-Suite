@@ -1,0 +1,319 @@
+Refine the existing hero section ONLY by adding a subtle editorial right-side composition.
+
+IMPORTANT:
+Do NOT redesign the hero.
+Do NOT modify the existing left-side content, text, spacing, typography hierarchy, CTA structure, or animations.
+
+Preserve:
+- the current left-aligned cinematic layout
+- existing headline
+- existing subtext
+- existing CTA buttons
+- current spacing system
+- current motion system
+- existing dark editorial aesthetic
+
+This is NOT a dashboard UI.
+This is NOT a SaaS metrics section.
+The right side should feel:
+editorial,
+cinematic,
+minimal,
+atmospheric,
+premium.
+
+════════════
+LAYOUT UPDATE
+════════════
+
+Wrap the existing hero content in a desktop split layout.
+
+Desktop:
+- left content approximately 55%
+- right composition approximately 35–40%
+- subtle divider line between them
+
+Mobile:
+- preserve existing single-column layout
+- completely hide the right-side composition below md breakpoint
+
+Use:
+flex-row desktop
+flex-col mobile
+
+Gap:
+large negative space, not cramped.
+
+════════════
+DIVIDER LINE
+════════════
+
+Between the left and right columns, add a subtle vertical divider.
+
+Desktop only.
+
+Style:
+- 1px width
+- self-stretch
+- bg-gradient-to-b
+- from-transparent
+- via-[#2A2A28]
+- to-transparent
+- low opacity
+- cinematic/editorial
+
+The divider should feel architectural, not functional.
+
+════════════
+RIGHT-SIDE COMPOSITION
+════════════
+
+The right side should NOT feel like:
+- a dashboard
+- analytics UI
+- startup metrics section
+- widget panel
+
+It should feel like:
+an editorial identity composition.
+
+The right side should contain ONLY:
+
+1. Subtle staggered stat cards
+2. Small conceptual skill pills
+3. One giant faded typography fragment
+4. Ambient atmosphere layers
+
+════════════
+BACKGROUND TYPOGRAPHY FRAGMENT
+════════════
+
+Add one oversized ultra-low-opacity typography fragment behind the composition.
+
+Use:
+"SYSTEMS"
+
+Style:
+- Clash Display
+- font-size approximately 220px–280px
+- font-weight 700
+- letter-spacing -0.04em
+- color rgba(255,255,255,0.025)
+- positioned partially off-grid
+- very subtle blur allowed
+- layered behind cards
+
+This element should create:
+depth,
+editorial sophistication,
+cinematic atmosphere.
+
+It should NOT dominate the hero.
+
+════════════
+STAT CARDS
+════════════
+
+Instead of a rigid 2x2 grid,
+create a more editorial staggered layout.
+
+Use:
+- 3 cards only
+- asymmetrical positioning
+- slight vertical offsets
+- breathable spacing
+
+Cards should feel:
+soft,
+minimal,
+premium,
+atmospheric.
+
+Card styling:
+- bg-[#111110]/70
+- backdrop-blur-sm
+- border border-[rgba(255,255,255,0.05)]
+- rounded-2xl
+- subtle inner shadow
+- restrained hover border glow
+- NO strong glow effects
+
+Typography:
+Labels:
+- JetBrains Mono
+- uppercase
+- 10px
+- tracking-[0.18em]
+- color #444440
+
+Numbers:
+- Clash Display
+- 30px–36px
+- font-semibold
+- color #F0F0EC
+- tight line-height
+
+Sub-label:
+- JetBrains Mono
+- 10px
+- color #444440
+
+════════════
+CARD CONTENT
+════════════
+
+Card 1:
+Label:
+"COMMUNITY"
+
+Number:
+"40K+"
+
+Sub:
+"audience reach"
+
+Card 2:
+Label:
+"CONTENT"
+
+Number:
+"5M+"
+
+Sub:
+"views generated"
+
+Card 3:
+Label:
+"SYSTEMS"
+
+Number:
+"AI"
+
+Sub:
+"design + storytelling"
+
+Use restrained amber highlights ONLY on:
+- select numbers
+- subtle accents
+
+Avoid overusing amber.
+
+════════════
+SKILL PILLS
+════════════
+
+Below the stat cards, add a SMALL cluster of conceptual skill pills.
+
+Maximum:
+5–6 pills only.
+
+Avoid:
+tool-heavy labels,
+resume-style wording,
+generic skills.
+
+Use these pills:
+
+- AI Visual Systems
+- Cinematic Editing
+- Prompt Engineering
+- Digital Storytelling
+- Creative Technology
+- AI Tooling
+
+Pill style:
+- JetBrains Mono
+- uppercase
+- 10px
+- tracking-[0.15em]
+- px-3 py-1.5
+- rounded-full
+- border border-[rgba(255,255,255,0.06)]
+- text-[#555550]
+- subtle hover border amber tint
+- NO strong hover glow
+
+Layout:
+- loose wrapping cluster
+- asymmetrical spacing
+- not perfectly aligned
+
+════════════
+AMBIENT ATMOSPHERE
+════════════
+
+Add subtle atmospheric layers behind the right composition:
+
+- faint mesh gradients
+- ultra-soft amber atmosphere
+- subtle grain texture
+- low-opacity radial glow
+- restrained depth
+
+Avoid:
+- cyberpunk visuals
+- bright gradients
+- flashy glow blobs
+- floating dashboard UI
+- excessive blur layers
+
+The atmosphere should feel:
+cinematic,
+intelligent,
+editorial.
+
+════════════
+MOTION
+════════════
+
+Reuse existing Framer Motion variants already in the project.
+
+Animation style:
+- subtle fade-up
+- staggered reveal
+- restrained motion
+- cinematic timing
+
+Avoid:
+- bouncy motion
+- exaggerated spring effects
+- flashy entrance animations
+
+Cards:
+slight stagger.
+
+Pills:
+gentle delayed fade.
+
+════════════
+IMPORTANT RULES
+════════════
+
+1. ONLY modify the hero section
+2. Keep all existing left-side content unchanged
+3. Keep the current hero headline exactly as it is
+4. Hide the right-side composition on mobile
+5. Do NOT add new dependencies
+6. Preserve the current cinematic premium visual identity
+7. Maintain intentional negative space
+8. Prioritize editorial restraint over information density
+
+════════════
+FINAL EXPERIENCE
+════════════
+
+The hero should now feel:
+- more balanced
+- more cinematic
+- more premium
+- more editorial
+- more intelligent
+- more visually complete
+
+The right side should act as:
+an atmospheric identity composition,
+NOT a dashboard UI.
+
+The final result should feel closer to:
+a modern AI creative studio portfolio
+than a student portfolio website.
