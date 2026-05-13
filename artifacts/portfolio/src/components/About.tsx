@@ -2,25 +2,21 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const ROLE_TAGS = [
-  { label: "AI Visual Designer", color: "var(--brand)" },
-  { label: "Video Creator", color: "var(--brand-light)" },
-  { label: "NLP Builder", color: "var(--brand)" },
-  { label: "Content Strategist", color: "var(--brand-light)" },
-  { label: "Creative Lead", color: "var(--brand)" },
+  { label: "AI Visual Design", color: "var(--brand)" },
+  { label: "Video Creation", color: "var(--brand-light)" },
+  { label: "AI Systems", color: "var(--brand)" },
+  { label: "Creative Technology", color: "var(--brand-light)" },
 ];
 
-const TOOLS = [
-  "Canva",
-  "CapCut",
-  "Adobe Firefly",
-  "Streamlit",
-  "HuggingFace",
-  "ElevenLabs",
+const TOOL_GROUPS = [
+  { label: "VISUAL", tools: ["Canva", "Adobe Firefly", "CapCut"] },
+  { label: "AI", tools: ["Hugging Face", "ElevenLabs"] },
+  { label: "TECHNICAL", tools: ["Streamlit", "Python"] },
 ];
 
 const STATS = [
-  { value: "40K+", label: "Followers" },
-  { value: "5M+", label: "Views" },
+  { value: "40K+", label: "Community Reach" },
+  { value: "5M+", label: "Viral Content Views" },
 ];
 
 const containerVariants = {
@@ -45,17 +41,51 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="w-full py-28 px-6"
+      className="relative w-full py-28 px-6 overflow-hidden"
       style={{ backgroundColor: "var(--surface)" }}
     >
+      {/* Editorial background number */}
+      <div
+        className="pointer-events-none select-none absolute"
+        aria-hidden
+        style={{
+          fontFamily: "var(--app-font-display)",
+          fontSize: "clamp(140px, 16vw, 200px)",
+          fontWeight: 700,
+          color: "rgba(255,255,255,0.03)",
+          right: "-20px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          lineHeight: 1,
+          letterSpacing: "-0.04em",
+          userSelect: "none",
+        }}
+      >
+        02
+      </div>
+
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-20 items-start">
-        {/* Left column — 3/5 */}
+
+        {/* ── LEFT COLUMN — 3/5 ── */}
         <motion.div
           className="lg:col-span-3 flex flex-col gap-6"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
+          {/* Metadata row */}
+          <motion.p
+            variants={itemVariants}
+            className="text-[11px] tracking-[0.22em] uppercase"
+            style={{
+              fontFamily: "var(--app-font-mono)",
+              color: "#F5A623",
+              opacity: 0.75,
+            }}
+          >
+            Creative Technologist · AI Visual Systems · Digital Storytelling
+          </motion.p>
+
           {/* Section label */}
           <motion.p
             variants={itemVariants}
@@ -64,6 +94,7 @@ export default function About() {
               fontFamily: "var(--app-font-body)",
               color: "var(--brand)",
               letterSpacing: "0.2em",
+              marginTop: "-12px",
             }}
           >
             About me
@@ -81,11 +112,11 @@ export default function About() {
           >
             Not just an engineer.{" "}
             <span style={{ color: "var(--brand-light)" }}>
-              A builder of experiences.
+              A builder of digital experiences.
             </span>
           </motion.h2>
 
-          {/* Body paragraphs */}
+          {/* Body paragraph 1 */}
           <motion.p
             variants={itemVariants}
             className="text-base leading-relaxed"
@@ -96,16 +127,16 @@ export default function About() {
               lineHeight: 1.75,
             }}
           >
-            Final-year CSE student who lives at the crossroads of code, design,
-            and culture. I've led the graphic design & video editing team at
-            DevCatalyst, shipped AI/NLP projects, and co-run{" "}
-            <span style={{ color: "var(--text-primary)", fontWeight: 400 }}>
-              Ammonium_Cyanide
-            </span>{" "}
-            — a meme page with 40K+ followers and 5M+ viral views — understanding
-            what makes content actually hit.
+            Final-year CSE student exploring the intersection of AI, visual systems, and digital
+            storytelling. I led the graphic design & video editing team at DevCatalyst, built
+            AI/NLP tools using{" "}
+            <span style={{ color: "var(--brand-light)", fontWeight: 400 }}>Hugging Face</span> and
+            Streamlit, and co-created Ammonium_Cyanide — a content platform reaching{" "}
+            <span style={{ color: "var(--brand-light)", fontWeight: 400 }}>40K+</span> followers
+            and <span style={{ color: "var(--brand-light)", fontWeight: 400 }}>5M+</span> views.
           </motion.p>
 
+          {/* Body paragraph 2 */}
           <motion.p
             variants={itemVariants}
             className="text-base leading-relaxed"
@@ -116,10 +147,9 @@ export default function About() {
               lineHeight: 1.75,
             }}
           >
-            I think in systems, feel in aesthetics, and understand virality from
-            the inside. That's the combination that makes me unusually useful for
-            creative AI production — I don't just build the tool, I understand
-            why people will care about it.
+            I'm interested in the space where technical systems, visual storytelling, and internet
+            culture overlap. That perspective shapes how I approach creative AI production —
+            building experiences that are both functional and emotionally engaging.
           </motion.p>
 
           {/* Stats */}
@@ -144,11 +174,10 @@ export default function About() {
                   {value}
                 </span>
                 <span
-                  className="text-xs tracking-wide uppercase"
+                  className="text-[10px] tracking-[0.18em] uppercase"
                   style={{
-                    fontFamily: "var(--app-font-body)",
+                    fontFamily: "var(--app-font-mono)",
                     color: "var(--text-muted)",
-                    letterSpacing: "0.1em",
                   }}
                 >
                   {label}
@@ -158,9 +187,10 @@ export default function About() {
           </motion.div>
         </motion.div>
 
-        {/* Right column — 2/5 */}
+        {/* ── RIGHT COLUMN — 2/5 ── */}
         <motion.div
-          className="lg:col-span-2"
+          className="lg:col-span-2 lg:pl-8 lg:border-l"
+          style={{ borderColor: "rgba(255,255,255,0.05)" }}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
@@ -181,9 +211,10 @@ export default function About() {
               <p
                 className="text-xs mb-3 tracking-widest uppercase"
                 style={{
-                  fontFamily: "var(--app-font-body)",
+                  fontFamily: "var(--app-font-mono)",
                   color: "var(--text-muted)",
                   letterSpacing: "0.18em",
+                  fontSize: "10px",
                 }}
               >
                 Roles
@@ -212,35 +243,52 @@ export default function About() {
             {/* Divider */}
             <div style={{ height: "1px", backgroundColor: "var(--surface-border)" }} />
 
-            {/* Tool tags */}
-            <div>
+            {/* Tool groups */}
+            <div className="flex flex-col gap-4">
               <p
-                className="text-xs mb-3 tracking-widest uppercase"
+                className="text-xs tracking-widest uppercase"
                 style={{
-                  fontFamily: "var(--app-font-body)",
+                  fontFamily: "var(--app-font-mono)",
                   color: "var(--text-muted)",
                   letterSpacing: "0.18em",
+                  fontSize: "10px",
                 }}
               >
                 Tools
               </p>
-              <div className="flex flex-wrap gap-2">
-                {TOOLS.map((tool) => (
-                  <span
-                    key={tool}
-                    className="px-2.5 py-1 rounded-md text-xs"
+              {TOOL_GROUPS.map(({ label, tools }) => (
+                <div key={label}>
+                  <p
+                    className="mb-2"
                     style={{
-                      fontFamily: "monospace",
-                      backgroundColor: "rgba(255,255,255,0.04)",
-                      border: "1px solid var(--surface-border)",
-                      color: "var(--text-secondary)",
-                      letterSpacing: "0.02em",
+                      fontFamily: "var(--app-font-mono)",
+                      fontSize: "9px",
+                      letterSpacing: "0.2em",
+                      textTransform: "uppercase",
+                      color: "rgba(255,255,255,0.2)",
                     }}
                   >
-                    {tool}
-                  </span>
-                ))}
-              </div>
+                    {label}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="px-2.5 py-1 rounded-md text-xs"
+                        style={{
+                          fontFamily: "var(--app-font-mono)",
+                          backgroundColor: "rgba(255,255,255,0.04)",
+                          border: "1px solid var(--surface-border)",
+                          color: "var(--text-secondary)",
+                          letterSpacing: "0.02em",
+                        }}
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>

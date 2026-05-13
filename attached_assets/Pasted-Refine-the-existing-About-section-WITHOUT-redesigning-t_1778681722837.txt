@@ -1,0 +1,250 @@
+Refine the existing About section WITHOUT redesigning the layout, breaking responsiveness, changing spacing systems, or altering the overall cinematic visual identity.
+
+This is a refinement pass only.
+
+Preserve:
+- existing dark premium aesthetic
+- existing amber accent system
+- existing spacing rhythm
+- existing animation system
+- existing card styling
+- existing layout structure
+- existing responsiveness
+- existing typography hierarchy
+
+Only apply the following targeted improvements.
+
+════════════
+SECTION IDENTITY UPDATE
+════════════
+
+Add a subtle metadata row above the section heading:
+
+"CREATIVE TECHNOLOGIST · AI VISUAL SYSTEMS · DIGITAL STORYTELLING"
+
+Style:
+- JetBrains Mono
+- uppercase
+- 11px
+- tracking-[0.22em]
+- color #F5A623
+- subtle opacity
+- restrained appearance
+
+Place above:
+"ABOUT ME"
+
+Do NOT overpower the main heading.
+
+════════════
+EDITORIAL BACKGROUND NUMBER
+════════════
+
+Add a subtle oversized background number:
+"02"
+
+Style:
+- Cabinet Grotesk
+- font-size approximately 180px
+- opacity 0.03
+- positioned partially off-grid
+- cinematic editorial layering
+- non-distracting
+
+This should create depth, not visual clutter.
+
+════════════
+MAIN HEADING UPDATE
+════════════
+
+Replace the current heading with:
+
+"Not just an engineer. A builder of digital experiences."
+
+Maintain:
+- existing typography scale
+- existing cinematic spacing
+- existing line-height
+- existing amber highlight styling
+
+Highlight:
+"digital experiences"
+
+using:
+#F5A623
+
+════════════
+BODY TEXT UPDATE
+════════════
+
+Replace the existing body copy with:
+
+"Final-year CSE student exploring the intersection of AI, visual systems, and digital storytelling. I led the graphic design & video editing team at DevCatalyst, built AI/NLP tools using Hugging Face and Streamlit, and co-created Ammonium_Cyanide — a content platform reaching 40K+ followers and 5M+ views.
+
+I’m interested in the space where technical systems, visual storytelling, and internet culture overlap. That perspective shapes how I approach creative AI production — building experiences that are both functional and emotionally engaging."
+
+Typography:
+- Satoshi
+- preserve existing font sizing and spacing
+- maintain premium editorial readability
+
+Amber highlights:
+- "40K+"
+- "5M+"
+- "Hugging Face"
+
+Use restrained amber emphasis only.
+
+════════════
+RIGHT COLUMN — EDITORIAL PORTRAIT
+════════════
+
+Add the uploaded cinematic portrait image above the identity cards.
+
+IMPORTANT:
+Do NOT style it like:
+- a profile picture
+- LinkedIn portrait
+- circular avatar
+- profile card
+
+The image should feel:
+- editorial
+- cinematic
+- premium
+- integrated into the layout
+- softly atmospheric
+
+Image treatment:
+- slightly desaturated
+- soft contrast
+- subtle grain
+- dark tonal range
+- warm cinematic grading
+- soft edge fading into layout
+- rectangular crop
+
+Maintain breathing space around the image.
+
+════════════
+ROLE TAGS REFINEMENT
+════════════
+
+Reduce the number of role pills for cleaner hierarchy.
+
+REMOVE:
+- Content Strategist
+- Creative Lead
+
+REPLACE:
+"NLP Builder"
+
+WITH:
+"AI Systems"
+
+Final role pills:
+- AI Visual Design
+- Video Creation
+- AI Systems
+- Creative Technology
+
+Maintain:
+- existing glass styling
+- existing hover behavior
+- existing spacing
+- existing amber accents
+
+════════════
+TOOLS SECTION REFINEMENT
+════════════
+
+Instead of random tool pills, organize tools into subtle grouped categories.
+
+Group 1:
+VISUAL
+- Canva
+- Adobe Firefly
+- CapCut
+
+Group 2:
+AI
+- Hugging Face
+- ElevenLabs
+
+Group 3:
+TECHNICAL
+- Streamlit
+- Python
+
+Style:
+- keep minimal glass pill styling
+- maintain monochrome aesthetic
+- subtle spacing hierarchy
+- small mono category labels
+
+The tools area should feel:
+structured,
+intentional,
+editorial.
+
+════════════
+STATS SECTION REFINEMENT
+════════════
+
+Keep the existing stat cards.
+
+Only update labels.
+
+Replace:
+"Followers"
+
+WITH:
+"COMMUNITY REACH"
+
+Replace:
+"Views"
+
+WITH:
+"VIRAL CONTENT VIEWS"
+
+Style:
+- JetBrains Mono
+- uppercase
+- smaller size
+- subtle opacity
+- premium editorial feel
+
+════════════
+VISUAL REFINEMENT
+════════════
+
+Add a subtle vertical divider line between the left content and right sidebar on desktop only.
+
+Style:
+1px solid rgba(255,255,255,0.05)
+
+Maintain:
+- large negative space
+- breathable layout
+- cinematic restraint
+
+════════════
+FINAL EXPERIENCE
+════════════
+
+The About section should now feel:
+- more editorial
+- more mature
+- more cinematic
+- more premium
+- more human
+- more intentional
+- more aligned with a hybrid AI creative-technologist identity
+
+The final result should feel closer to:
+a modern creative studio portfolio
+than a student About page.
+
+Most importantly:
+DO NOT redesign the section from scratch.
+Only refine and elevate the current implementation.
