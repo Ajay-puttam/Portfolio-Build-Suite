@@ -5,7 +5,7 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.08,
       delayChildren: 0.1,
     },
   },
@@ -26,45 +26,28 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{ backgroundColor: "var(--surface)" }}
     >
-      {/* Ambient radial glow */}
-      <div
-        className="pointer-events-none absolute inset-0 flex items-center justify-center"
-        aria-hidden
-      >
-        <div
-          style={{
-            width: "700px",
-            height: "700px",
-            borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(245,166,35,0.18) 0%, rgba(245,166,35,0.04) 60%, transparent 100%)",
-            filter: "blur(60px)",
-            transform: "translateY(-60px)",
-          }}
-        />
-      </div>
-
-      {/* Subtle grid overlay */}
+      {/* Grid overlay */}
       <div
         className="pointer-events-none absolute inset-0"
         aria-hidden
         style={{
-          backgroundImage:
-            "linear-gradient(var(--surface-border) 1px, transparent 1px), linear-gradient(90deg, var(--surface-border) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-          opacity: 0.35,
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)
+          `,
+          backgroundSize: "80px 80px",
         }}
       />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto w-full">
+      <div className="relative z-10 flex flex-col items-start text-left px-6 md:pl-[80px] w-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center gap-6 w-full"
+          className="flex flex-col items-start gap-6 w-full"
         >
-          {/* 1. Badge */}
+          {/* Badge */}
           <motion.div variants={itemVariants}>
             <span
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium tracking-wide uppercase"
@@ -87,54 +70,39 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          {/* 2. Name intro */}
-          <motion.div variants={itemVariants}>
-            <p
-              className="text-base md:text-lg font-medium"
-              style={{
-                fontFamily: "var(--app-font-body)",
-                color: "var(--text-secondary)",
-                borderLeft: "2px solid var(--brand)",
-                paddingLeft: "12px",
-                textAlign: "left",
-              }}
-            >
-              Hey, I'm Ajay Puttam
-            </p>
-          </motion.div>
+          {/* Label — replaces name intro */}
+          <motion.p
+            variants={itemVariants}
+            className="font-mono text-[11px] tracking-[0.22em] uppercase"
+            style={{ color: "#F5A623", marginBottom: "-8px" }}
+          >
+            CREATIVE TECHNOLOGIST
+          </motion.p>
 
-          {/* 3. Manifesto headline — 2 lines */}
-          <div className="flex flex-col items-center">
-            <motion.h1
-              variants={itemVariants}
-              className="leading-none tracking-tight"
-              style={{
-                fontFamily: "var(--app-font-display)",
-                fontWeight: 800,
-                fontSize: "clamp(3.5rem, 10vw, 7.5rem)",
-                color: "var(--text-primary)",
-                lineHeight: 1.0,
-              }}
-            >
-              I build where creativity
-            </motion.h1>
-            <motion.h1
-              variants={itemVariants}
-              className="leading-none tracking-tight"
-              style={{
-                fontFamily: "var(--app-font-display)",
-                fontWeight: 800,
-                fontSize: "clamp(3.5rem, 10vw, 7.5rem)",
-                color: "var(--text-primary)",
-                lineHeight: 1.0,
-              }}
-            >
-              meets{" "}
-              <span style={{ color: "var(--brand)" }}>intelligence.</span>
-            </motion.h1>
-          </div>
+          {/* Headline — 3-line manifesto */}
+          <motion.h1
+            variants={itemVariants}
+            className="text-left"
+            style={{
+              fontFamily: "var(--app-font-display)",
+              fontSize: "clamp(42px, 7vw, 76px)",
+              lineHeight: 1.04,
+              letterSpacing: "-0.02em",
+              fontWeight: 600,
+              color: "#F0F0EC",
+            }}
+          >
+            I build at the
+            <br />
+            intersection of
+            <br />
+            <span style={{ color: "#F5A623" }}>AI,</span>{" "}
+            <span style={{ color: "#F5A623" }}>design</span>
+            <span style={{ color: "#F0F0EC" }}> +</span>{" "}
+            <span style={{ color: "#F5A623" }}>culture.</span>
+          </motion.h1>
 
-          {/* 4. Sub-headline */}
+          {/* Sub-headline */}
           <motion.p
             variants={itemVariants}
             className="max-w-xl text-lg sm:text-xl"
@@ -150,62 +118,35 @@ export default function Hero() {
             I speak all three fluently.
           </motion.p>
 
-          {/* 5. CTAs */}
+          {/* CTAs */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center gap-4 mt-2"
+            className="flex flex-col sm:flex-row items-start justify-start gap-4 mt-2"
           >
             <a
               href="#work"
-              className="inline-flex items-center justify-center px-7 py-3 rounded-full text-sm font-medium transition-all duration-300"
-              style={{
-                fontFamily: "var(--app-font-body)",
-                backgroundColor: "var(--brand)",
-                color: "#ffffff",
-                boxShadow: "0 0 0 0 rgba(245,166,35,0.4)",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                  "0 0 24px 6px rgba(245,166,35,0.45)";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                  "0 0 0 0 rgba(245,166,35,0.4)";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
-              }}
+              className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-[#F5A623] text-[#F5A623] bg-transparent hover:bg-[#F5A623] hover:text-[#0A0A0A]"
+              style={{ fontFamily: "var(--app-font-body)" }}
             >
               View My Work
             </a>
             <a
-              href="#contact"
-              className="group inline-flex items-center justify-center px-7 py-3 rounded-full text-sm font-medium transition-all duration-300"
-              style={{
-                fontFamily: "var(--app-font-body)",
-                backgroundColor: "transparent",
-                color: "var(--text-primary)",
-                border: "1px solid var(--surface-border)",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--brand)";
-                (e.currentTarget as HTMLAnchorElement).style.color = "var(--brand-light)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--surface-border)";
-                (e.currentTarget as HTMLAnchorElement).style.color = "var(--text-primary)";
-              }}
+              href="/resume.pdf"
+              download
+              className="group inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-[rgba(255,255,255,0.12)] text-[#666664] bg-transparent hover:border-[rgba(255,255,255,0.3)] hover:text-[#F0F0EC]"
+              style={{ fontFamily: "var(--app-font-body)" }}
             >
-              Let's Talk
+              Download Resume
               <span className="ml-1 inline-block transition-transform duration-200 group-hover:translate-x-1">
                 →
               </span>
             </a>
           </motion.div>
 
-          {/* 6. Social proof */}
+          {/* Social proof */}
           <motion.p
             variants={itemVariants}
-            className="text-xs tracking-wide text-center"
+            className="text-xs tracking-wide"
             style={{
               fontFamily: "var(--app-font-body)",
               color: "var(--text-muted)",
@@ -220,18 +161,27 @@ export default function Hero() {
             DevCatalyst Lead
           </motion.p>
         </motion.div>
+      </div>
 
-        {/* 7. Location line — static, no animation */}
+      {/* Bottom-right: scroll to explore (vertical text) */}
+      <div
+        className="absolute bottom-10 right-8 hidden md:block pointer-events-none"
+        style={{ writingMode: "vertical-rl", fontFamily: "monospace" }}
+      >
+        <span className="text-[10px] tracking-[0.3em] uppercase" style={{ color: "#2A2A28" }}>
+          scroll to explore
+        </span>
+      </div>
+
+      {/* Bottom-left: availability */}
+      <div className="absolute bottom-10 left-6 md:left-[80px] hidden md:block pointer-events-none">
         <p
-          className="mt-8 text-xs tracking-widest uppercase text-center"
-          style={{
-            fontFamily: "var(--app-font-body)",
-            color: "var(--text-muted)",
-            opacity: 0.6,
-            letterSpacing: "0.18em",
-          }}
+          className="font-mono text-[10px] tracking-[0.2em] uppercase leading-relaxed"
+          style={{ color: "#2A2A28" }}
         >
-          Based in Hyderabad, India · Available for global remote roles
+          [AVAILABLE FOR PLACEMENT]
+          <br />
+          [HYDERABAD · INDIA]
         </p>
       </div>
 

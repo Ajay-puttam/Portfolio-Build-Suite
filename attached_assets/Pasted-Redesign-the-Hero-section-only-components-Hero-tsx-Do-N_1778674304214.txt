@@ -1,0 +1,153 @@
+Redesign the Hero section only (components/Hero.tsx). 
+Do NOT touch any other component or file.
+
+---
+
+CHANGE 1 — Left-align all content:
+
+Change the hero content container from centered to left-aligned.
+- Remove any mx-auto or text-center or items-center on the content wrapper
+- Add: pl-[80px] on desktop, pl-[24px] on mobile (use px-6 md:pl-[80px])
+- Text alignment: text-left throughout
+- CTA buttons: justify-start (flex-start), not centered
+- Keep the full viewport height (min-h-screen) and vertical centering (flex items-center)
+
+---
+CHANGE 3 — Replace headline:
+
+Remove the existing headline element entirely. Replace with a new element structured exactly like this:
+
+<motion.h1
+  variants={existingFadeUpVariant}
+  style={{
+    fontFamily: "'Clash Display', sans-serif",
+    fontSize: 'clamp(42px, 7vw, 76px)',
+    lineHeight: '1.04',
+    letterSpacing: '-0.02em',
+    fontWeight: 600,
+    color: '#F0F0EC',
+  }}
+  className="text-left"
+>
+  I build at the<br />
+  intersection of<br />
+  <span style={{ color: '#F5A623' }}>AI,</span>{' '}
+  <span style={{ color: '#F5A623' }}>design</span>
+  <span style={{ color: '#F0F0EC' }}> +</span>{' '}
+  <span style={{ color: '#F5A623' }}>culture.</span>
+</motion.h1>
+
+Note: The "+" stays white (#F0F0EC), only "AI," "design" and "culture." are amber.
+The <br /> tags create the 3-line break.
+Wrap in the same Framer Motion variant as before — just update the child count in staggerChildren if needed (set staggerChildren: 0.08).
+
+---
+
+CHANGE 4 — Replace name intro label:
+
+Remove "Hey, I'm Ajay Puttam" element.
+Replace with:
+
+<motion.p variants={existingFadeUpVariant} className="font-mono text-[11px] tracking-[0.22em] text-[#F5A623] uppercase mb-6">
+  CREATIVE TECHNOLOGIST
+</motion.p>
+
+Place this ABOVE the headline, same position as before.
+
+---
+
+CHANGE 5 — Remove amber glow blob:
+
+Find and remove any of these behind the headline text:
+- Any div with radial-gradient containing purple or amber rgba values
+- Any absolute div with blur-[Xpx] or rounded-full used as a glow blob
+- Any background glow specifically tied to the word "intelligence."
+
+Keep ONLY the CSS grid overlay (added in Change 7 below).
+Do NOT remove the photo layer (if it exists from previous changes).
+
+---
+
+CHANGE 6 — Primary CTA button:
+
+Replace existing primary button styles with:
+className="border border-[#F5A623] text-[#F5A623] bg-transparent px-7 py-3 rounded-lg 
+transition-all duration-200 hover:bg-[#F5A623] hover:text-[#0A0A0A] font-medium"
+
+Text: "View My Work"
+Keep any existing onClick or href logic unchanged.
+
+---
+
+CHANGE 7 — Secondary CTA button:
+
+Replace existing secondary button styles with:
+className="border border-[rgba(255,255,255,0.12)] text-[#666664] bg-transparent px-7 py-3 
+rounded-lg transition-all duration-200 hover:border-[rgba(255,255,255,0.3)] hover:text-[#F0F0EC]"
+
+Text: "Download Resume"
+Add: href="/resume.pdf" download attribute (I will add the file to public/resume.pdf)
+Keep the group className and arrow → span if it exists.
+
+---
+
+CHANGE 8 — Background grid overlay:
+
+Find the existing hero background wrapper div (the one that holds background elements, usually absolute inset-0 or similar).
+
+FIRST: Remove any existing grid background-image or backgroundImage style already on this div to avoid double-layering.
+
+THEN add this style to that same div:
+style={{
+  backgroundImage: `
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)
+  `,
+  backgroundSize: '80px 80px',
+}}
+
+If no background wrapper div exists, create one:
+<div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: ..., backgroundSize: '80px 80px' }} />
+
+---
+
+CHANGE 9 — Bottom-right "scroll to explore" label:
+
+Add this element inside the hero section container (position relative must be on the section):
+
+<div
+  className="absolute bottom-10 right-8 hidden md:block pointer-events-none"
+  style={{ writingMode: 'vertical-rl', fontFamily: 'monospace' }}
+>
+  <span className="text-[10px] tracking-[0.3em] text-[#2A2A28] uppercase">
+    scroll to explore
+  </span>
+</div>
+
+Hidden on mobile (hidden md:block).
+Do NOT remove or replace the existing scroll chevron indicator — keep both.
+
+---
+
+CHANGE 10 — Bottom-left availability label:
+
+Add this element inside the hero section container:
+
+<div className="absolute bottom-10 left-6 md:left-[80px] hidden md:block pointer-events-none">
+  <p className="font-mono text-[10px] tracking-[0.2em] text-[#2A2A28] uppercase leading-relaxed">
+    [AVAILABLE FOR PLACEMENT]<br />
+    [HYDERABAD · INDIA]
+  </p>
+</div>
+
+Hidden on mobile (hidden md:block).
+
+---
+
+STRICT RULES:
+1. Only modify components/Hero.tsx and add one @import line to globals.css
+2. Do not touch About, Projects, Leadership, Contact, Navbar, Footer, or any other file
+3. Do not change any Framer Motion variant definitions — only adjust staggerChildren value if needed
+4. Do not remove the photo background layer if it was added previously
+5. Do not change spacing, padding, or layout of any section other than hero content alignment
+6. Keep all existing className structures — only replace color values and text content
