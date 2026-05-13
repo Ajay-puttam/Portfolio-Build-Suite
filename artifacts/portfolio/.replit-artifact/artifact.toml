@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Varun | Creative AI Technologist"
+title = "Ajay | Creative AI Technologist"
 version = "1.0.0"
 id = "artifacts/portfolio"
 router = "path"
