@@ -1,9 +1,9 @@
 import { Github, Linkedin, Instagram } from "lucide-react";
 
 const SOCIAL_LINKS = [
-  { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/yourprofile", label: "LinkedIn" },
-  { icon: Instagram, href: "https://instagram.com/yourhandle", label: "Instagram" },
+  { icon: Github, href: "https://github.com/Ajay-puttam", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/ajay-puttam", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/oye__ajayyyy._/", label: "Instagram" },
 ];
 
 export default function Footer() {
@@ -24,7 +24,7 @@ export default function Footer() {
             color: "var(--text-muted)",
           }}
         >
-          © 2025 Varun. Built with React &amp; Framer Motion.
+          © 2025 Ajay Puttam. Built with React &amp; Framer Motion.
         </p>
 
         {/* Center */}

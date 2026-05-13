@@ -6,22 +6,22 @@ const CONTACT_CARDS = [
   {
     icon: Mail,
     label: "Mail me",
-    value: "hello@varun.dev",
-    href: "mailto:hello@varun.dev",
+    value: "ajay.puttam3@gmail.com",
+    href: "mailto:ajay.puttam3@gmail.com",
     accent: "#F5A623",
   },
   {
     icon: Linkedin,
     label: "Connect",
-    value: "linkedin.com/in/yourprofile",
-    href: "https://linkedin.com/in/yourprofile",
+    value: "linkedin.com/in/ajay-puttam",
+    href: "https://www.linkedin.com/in/ajay-puttam",
     accent: "#F7BC58",
   },
   {
     icon: Github,
     label: "See Code",
-    value: "github.com/yourusername",
-    href: "https://github.com/yourusername",
+    value: "github.com/Ajay-puttam",
+    href: "https://github.com/Ajay-puttam",
     accent: "#F5A623",
   },
 ];
