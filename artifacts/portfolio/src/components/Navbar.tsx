@@ -42,7 +42,7 @@ export default function Navbar() {
           className="hidden sm:flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium"
           style={{
             backgroundColor: "rgba(30, 30, 46, 0.8)",
-            border: "1px solid rgba(124, 58, 237, 0.25)",
+            border: "1px solid rgba(245, 166, 35, 0.25)",
             color: "var(--text-secondary)",
             fontFamily: "var(--app-font-body)",
           }}
@@ -119,7 +119,7 @@ export default function Navbar() {
                   className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-2"
                   style={{
                     backgroundColor: "rgba(30, 30, 46, 0.8)",
-                    border: "1px solid rgba(124, 58, 237, 0.25)",
+                    border: "1px solid rgba(245, 166, 35, 0.25)",
                     color: "var(--text-secondary)",
                   }}
                 >

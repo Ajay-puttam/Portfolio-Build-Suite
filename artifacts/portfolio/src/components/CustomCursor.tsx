@@ -59,7 +59,7 @@ export default function CustomCursor() {
           width: 34,
           height: 34,
           borderRadius: "50%",
-          border: "1.5px solid rgba(124,58,237,0.55)",
+          border: "1.5px solid rgba(245,166,35,0.55)",
         }}
       />
     </>

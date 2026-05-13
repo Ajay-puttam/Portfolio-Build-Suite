@@ -39,7 +39,7 @@ export default function Hero() {
             height: "700px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(124,58,237,0.18) 0%, rgba(124,58,237,0.04) 60%, transparent 100%)",
+              "radial-gradient(circle, rgba(245,166,35,0.18) 0%, rgba(245,166,35,0.04) 60%, transparent 100%)",
             filter: "blur(60px)",
             transform: "translateY(-60px)",
           }}
@@ -72,8 +72,8 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium tracking-wide uppercase"
               style={{
                 fontFamily: "var(--app-font-body)",
-                backgroundColor: "rgba(124, 58, 237, 0.12)",
-                border: "1px solid rgba(124, 58, 237, 0.35)",
+                backgroundColor: "rgba(245, 166, 35, 0.12)",
+                border: "1px solid rgba(245, 166, 35, 0.35)",
                 color: "var(--brand-light)",
                 letterSpacing: "0.1em",
               }}
@@ -136,16 +136,16 @@ export default function Hero() {
                 fontFamily: "var(--app-font-body)",
                 backgroundColor: "var(--brand)",
                 color: "#ffffff",
-                boxShadow: "0 0 0 0 rgba(124,58,237,0.4)",
+                boxShadow: "0 0 0 0 rgba(245,166,35,0.4)",
               }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                  "0 0 24px 6px rgba(124,58,237,0.45)";
+                  "0 0 24px 6px rgba(245,166,35,0.45)";
                 (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                  "0 0 0 0 rgba(124,58,237,0.4)";
+                  "0 0 0 0 rgba(245,166,35,0.4)";
                 (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
               }}
             >
