@@ -34,7 +34,7 @@ export default function Loader() {
               letterSpacing: "-0.02em",
             }}
           >
-            V.
+            A.
           </motion.span>
         </motion.div>
       )}
