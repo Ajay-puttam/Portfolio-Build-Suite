@@ -1,0 +1,126 @@
+I have an existing Hero section (components/Hero.tsx) in my Next.js 14 + Tailwind CSS portfolio. I want ONLY textual content changes, a few UI tweaks, and no structural or animation logic changes. Do not touch layout, Framer Motion variants, scroll indicator, background glow, or grid overlay.
+
+---
+
+PERSONAL DETAILS TO USE:
+- Name: Ajay Puttam
+- Role title: Creative AI Technologist
+- College: Matrusri Engineering College, Hyderabad
+- Background: CSE final year, graphic design + video editing team head, AI/NLP project builder, meme page co-admin (40K+ followers, 5M+ views)
+- Applying for: AI Visual Designer / AI Video Creator at a Creative AI Production company
+
+---
+
+CHANGE 1 — Top badge text:
+
+Old: "Available for creative AI roles"
+New: "Open to Work · Creative AI Roles"
+
+Style stays exactly the same (pulsing dot, pill shape, brand amber color).
+Just update the text string.
+
+---
+
+CHANGE 2 — Main headline:
+
+Old: Three separate one-word lines ("Creative." / "Technical." / "AI-Native.")
+New: One single powerful manifesto-style sentence split across 2 lines for visual weight:
+
+Line 1: "I build where creativity"
+Line 2: "meets intelligence."
+
+- Font: Space Grotesk, font-extrabold, text-5xl md:text-7xl lg:text-8xl
+- Line 2 "meets intelligence." should have the word "intelligence." in text-brand (#F5A623) — rest of text stays text-primary (warm white)
+- Keep the existing staggered Framer Motion fade-up animation — just reduce from 3 children to 2 (one per line)
+- Each line is its own motion.span or motion.div with the existing animation variant
+
+---
+
+CHANGE 3 — Sub-headline:
+
+Old: "I build at the intersection of AI, design, and internet culture."
+New: "Design. AI. Internet culture. — I speak all three fluently."
+
+- Font: Inter, text-lg md:text-xl, text-secondary
+- Keep existing fade-up animation and delay
+- Add a subtle em dash styled in text-brand/60: " — "
+
+---
+
+CHANGE 4 — Name introduction (ADD THIS — new element):
+
+Add a small line ABOVE the main headline (between the badge and the headline):
+
+Text: "Hey, I'm Ajay Puttam"
+Style:
+- Font: Inter, font-medium, text-base md:text-lg
+- Color: text-secondary (warm muted, not white)
+- A thin 2px left border in text-brand (#F5A623) with pl-3 (padding left)
+- Animate in as the first element (before the headline), same fade-up variant, delay 0s
+
+---
+
+CHANGE 5 — CTA Buttons:
+
+Primary button:
+- Text: "View My Work"
+- Style stays the same (solid amber bg, dark text, pill shape, hover glow)
+- No change needed if text already matches
+
+Secondary button:
+- Text: "Let's Talk"
+- Style stays the same (outlined, ghost)
+- Add a small arrow icon → after the text using a span: <span className="ml-1 group-hover:translate-x-1 transition-transform inline-block">→</span>
+- Add group className to the button element to enable the child hover effect
+
+---
+
+CHANGE 6 — Social proof micro-line (ADD THIS — new element):
+
+Add a small line of social proof BELOW the two CTA buttons:
+
+Text: "40K+ Followers · 5M+ Views · AI Projects · DevCatalyst Lead"
+
+Style:
+- Font: Inter, text-xs, text-muted, tracking-wide
+- Separator dots "·" in text-brand/50
+- No background, no border — just plain inline text, centered
+- Animate in last, after buttons, delay 0.8s, same fade-up variant
+- On desktop: centered under buttons. On mobile: centered, allow wrapping
+
+---
+
+CHANGE 7 — Page title / greeting tweak (ADD THIS — subtle):
+
+At the very bottom of the hero, just above the scroll indicator, add a single ultra-small line:
+
+Text: "Based in Hyderabad, India · Available for global remote roles"
+Style:
+- Font: Inter, text-xs, text-muted/60, tracking-widest, uppercase
+- Centered
+- No animation — static, just visible
+
+---
+
+FINAL ELEMENT ORDER inside the hero (top to bottom):
+
+1. Badge pill — "Open to Work · Creative AI Roles"
+2. Name intro — "Hey, I'm Ajay Puttam" (with left amber border)
+3. Manifesto headline — 2 lines, "intelligence." in amber
+4. Sub-headline — "Design. AI. Internet culture. — I speak all three fluently."
+5. CTA buttons — "View My Work" (primary) + "Let's Talk →" (secondary)
+6. Social proof line — "40K+ Followers · 5M+ Views · AI Projects · DevCatalyst Lead"
+7. Location line — "Based in Hyderabad, India · Available for global remote roles"
+8. Scroll indicator (already exists — do not touch)
+
+---
+
+RULES:
+1. Do NOT change any Framer Motion animation logic, variants, or viewport detection
+2. Do NOT change layout, flex direction, padding, or background elements
+3. Do NOT change the ambient glow or grid overlay
+4. Only add new text elements and update existing text strings
+5. For new elements (name intro, social proof, location line), reuse the existing fadeUp motion variant with appropriate delays
+6. Keep all className structures consistent with existing Tailwind patterns in the file
+
+Give me only the updated components/Hero.tsx file.

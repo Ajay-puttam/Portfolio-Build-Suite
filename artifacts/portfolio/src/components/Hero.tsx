@@ -20,8 +20,6 @@ const itemVariants = {
   },
 };
 
-const HEADLINE_LINES = ["Creative.", "Technical.", "AI-Native."];
-
 export default function Hero() {
   return (
     <section
@@ -66,7 +64,7 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col items-center gap-6 w-full"
         >
-          {/* Badge */}
+          {/* 1. Badge */}
           <motion.div variants={itemVariants}>
             <span
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium tracking-wide uppercase"
@@ -85,32 +83,58 @@ export default function Hero() {
                   animation: "glowPulse 3s ease-in-out infinite",
                 }}
               />
-              Available for creative AI roles
+              Open to Work · Creative AI Roles
             </span>
           </motion.div>
 
-          {/* Headline */}
+          {/* 2. Name intro */}
+          <motion.div variants={itemVariants}>
+            <p
+              className="text-base md:text-lg font-medium"
+              style={{
+                fontFamily: "var(--app-font-body)",
+                color: "var(--text-secondary)",
+                borderLeft: "2px solid var(--brand)",
+                paddingLeft: "12px",
+                textAlign: "left",
+              }}
+            >
+              Hey, I'm Ajay Puttam
+            </p>
+          </motion.div>
+
+          {/* 3. Manifesto headline — 2 lines */}
           <div className="flex flex-col items-center">
-            {HEADLINE_LINES.map((line, i) => (
-              <motion.h1
-                key={line}
-                variants={itemVariants}
-                custom={i}
-                className="leading-none tracking-tight"
-                style={{
-                  fontFamily: "var(--app-font-display)",
-                  fontWeight: 800,
-                  fontSize: "clamp(3.5rem, 10vw, 7.5rem)",
-                  color: "var(--text-primary)",
-                  lineHeight: 1.0,
-                }}
-              >
-                {line}
-              </motion.h1>
-            ))}
+            <motion.h1
+              variants={itemVariants}
+              className="leading-none tracking-tight"
+              style={{
+                fontFamily: "var(--app-font-display)",
+                fontWeight: 800,
+                fontSize: "clamp(3.5rem, 10vw, 7.5rem)",
+                color: "var(--text-primary)",
+                lineHeight: 1.0,
+              }}
+            >
+              I build where creativity
+            </motion.h1>
+            <motion.h1
+              variants={itemVariants}
+              className="leading-none tracking-tight"
+              style={{
+                fontFamily: "var(--app-font-display)",
+                fontWeight: 800,
+                fontSize: "clamp(3.5rem, 10vw, 7.5rem)",
+                color: "var(--text-primary)",
+                lineHeight: 1.0,
+              }}
+            >
+              meets{" "}
+              <span style={{ color: "var(--brand)" }}>intelligence.</span>
+            </motion.h1>
           </div>
 
-          {/* Subheadline */}
+          {/* 4. Sub-headline */}
           <motion.p
             variants={itemVariants}
             className="max-w-xl text-lg sm:text-xl"
@@ -121,10 +145,12 @@ export default function Hero() {
               lineHeight: 1.65,
             }}
           >
-            I build at the intersection of AI, design, and internet culture.
+            Design. AI. Internet culture.{" "}
+            <span style={{ color: "rgba(245,166,35,0.6)" }}>—</span>{" "}
+            I speak all three fluently.
           </motion.p>
 
-          {/* CTAs */}
+          {/* 5. CTAs */}
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center gap-4 mt-2"
@@ -153,7 +179,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-7 py-3 rounded-full text-sm font-medium transition-all duration-300"
+              className="group inline-flex items-center justify-center px-7 py-3 rounded-full text-sm font-medium transition-all duration-300"
               style={{
                 fontFamily: "var(--app-font-body)",
                 backgroundColor: "transparent",
@@ -170,12 +196,46 @@ export default function Hero() {
               }}
             >
               Let's Talk
+              <span className="ml-1 inline-block transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
             </a>
           </motion.div>
+
+          {/* 6. Social proof */}
+          <motion.p
+            variants={itemVariants}
+            className="text-xs tracking-wide text-center"
+            style={{
+              fontFamily: "var(--app-font-body)",
+              color: "var(--text-muted)",
+            }}
+          >
+            40K+ Followers
+            <span style={{ color: "rgba(245,166,35,0.5)", margin: "0 6px" }}>·</span>
+            5M+ Views
+            <span style={{ color: "rgba(245,166,35,0.5)", margin: "0 6px" }}>·</span>
+            AI Projects
+            <span style={{ color: "rgba(245,166,35,0.5)", margin: "0 6px" }}>·</span>
+            DevCatalyst Lead
+          </motion.p>
         </motion.div>
+
+        {/* 7. Location line — static, no animation */}
+        <p
+          className="mt-8 text-xs tracking-widest uppercase text-center"
+          style={{
+            fontFamily: "var(--app-font-body)",
+            color: "var(--text-muted)",
+            opacity: 0.6,
+            letterSpacing: "0.18em",
+          }}
+        >
+          Based in Hyderabad, India · Available for global remote roles
+        </p>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator — untouched */}
       <motion.div
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
         initial={{ opacity: 0 }}
