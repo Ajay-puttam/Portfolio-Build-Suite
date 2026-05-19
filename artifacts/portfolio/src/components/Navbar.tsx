@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "wouter";
 
 const NAV_LINKS = [
-  { label: "Work", href: "#work" },
+  { label: "About", href: "#about" },
+  { label: "Work", href: "#creative-work" },
   { label: "Projects", href: "#projects" },
   { label: "Leadership", href: "#leadership" },
-  { label: "About", href: "#about" },
+  { label: "Tools", href: "#tools" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 24);
@@ -17,6 +20,31 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (location !== "/") {
+      setLocation("/");
+      window.scrollTo(0, 0);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
+    e.preventDefault();
+    if (location !== "/") {
+      setLocation("/");
+      // Wait for React to render the homepage before scrolling
+      setTimeout(() => {
+        const el = document.getElementById(hash.replace("#", ""));
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const el = document.getElementById(hash.replace("#", ""));
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header
@@ -42,7 +70,8 @@ export default function Navbar() {
       >
         {/* Brand */}
         <a
-          href="#top"
+          href="/"
+          onClick={handleLogoClick}
           style={{
             fontFamily: "var(--app-font-display)",
             fontWeight: 500,
@@ -50,6 +79,7 @@ export default function Navbar() {
             letterSpacing: "-0.02em",
             color: "var(--text-primary)",
             textDecoration: "none",
+            cursor: "pointer",
           }}
         >
           Ajay Puttam
@@ -61,7 +91,8 @@ export default function Navbar() {
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
-                href={link.href}
+                href={`/${link.href}`}
+                onClick={(e) => handleNavClick(e, link.href)}
                 style={{
                   fontFamily: "var(--app-font-mono)",
                   fontSize: "11px",

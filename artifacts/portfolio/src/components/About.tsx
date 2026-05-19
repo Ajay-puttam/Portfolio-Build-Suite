@@ -2,22 +2,16 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const ROLE_TAGS = [
-  { label: "AI Visual Design", color: "var(--brand)" },
-  { label: "Video Creation", color: "var(--brand-light)" },
+  { label: "Visual Design", color: "var(--brand)" },
+  { label: "Cinematic Editing", color: "var(--brand-light)" },
   { label: "AI Systems", color: "var(--brand)" },
   { label: "Creative Technology", color: "var(--brand-light)" },
 ];
 
-const TOOL_GROUPS = [
-  { label: "VISUAL", tools: ["Canva", "Adobe Firefly", "CapCut"] },
-  { label: "AI", tools: ["Hugging Face", "ElevenLabs"] },
-  { label: "TECHNICAL", tools: ["Streamlit", "Python"] },
-];
-
 const STATS = [
-  { value: "40K+", label: "Community Reach" },
-  { value: "5M+", label: "Viral Content Views" },
-];
+  { value: "CSE", label: "Engineering + Creative Thinking" },
+  { value: "32+", label: "Viral Reels · 1M+ Views" },
+  { value: "3+", label: "Years of Creative Exploration" }];
 
 const containerVariants = {
   hidden: {},
@@ -64,6 +58,21 @@ export default function About() {
         02
       </div>
 
+      {/* Metadata row */}
+      <motion.p
+        variants={itemVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="max-w-6xl mx-auto mb-10 text-[11px] tracking-[0.22em] uppercase"
+        style={{
+          fontFamily: "var(--app-font-mono)",
+          color: "#656565",
+          opacity: 0.45,
+        }}
+      >
+        Creative Technologist · Visual Storytelling · AI Systems
+      </motion.p>
+
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-20 items-start">
 
         {/* ── LEFT COLUMN — 3/5 ── */}
@@ -73,18 +82,6 @@ export default function About() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {/* Metadata row */}
-          <motion.p
-            variants={itemVariants}
-            className="text-[11px] tracking-[0.22em] uppercase"
-            style={{
-              fontFamily: "var(--app-font-mono)",
-              color: "#F5A623",
-              opacity: 0.75,
-            }}
-          >
-            Creative Technologist · AI Visual Systems · Digital Storytelling
-          </motion.p>
 
           {/* Section label */}
           <motion.p
@@ -94,7 +91,6 @@ export default function About() {
               fontFamily: "var(--app-font-body)",
               color: "var(--brand)",
               letterSpacing: "0.2em",
-              marginTop: "-12px",
             }}
           >
             About me
@@ -127,13 +123,14 @@ export default function About() {
               lineHeight: 1.75,
             }}
           >
-            Final-year CSE student exploring the intersection of AI, visual systems, and digital
-            storytelling. I led the graphic design & video editing team at DevCatalyst, built
-            AI/NLP tools using{" "}
-            <span style={{ color: "var(--brand-light)", fontWeight: 400 }}>Hugging Face</span> and
-            Streamlit, and co-created Ammonium_Cyanide — a content platform reaching{" "}
-            <span style={{ color: "var(--brand-light)", fontWeight: 400 }}>40K+</span> followers
-            and <span style={{ color: "var(--brand-light)", fontWeight: 400 }}>5M+</span> views.
+            I'm Ajay, a final-year CSE student building at the intersection of{" "}
+            <span style={{ color: "var(--brand-light)", fontWeight: 400 }}>
+              technology, storytelling, and visual design
+            </span>
+            . What started as curiosity about video editing gradually evolved into
+            content creation, graphic design, AI development, and frontend experiences,
+            driven largely by self-learning and the excitement of creating things people
+            genuinely connect with.
           </motion.p>
 
           {/* Body paragraph 2 */}
@@ -147,9 +144,38 @@ export default function About() {
               lineHeight: 1.75,
             }}
           >
-            I'm interested in the space where technical systems, visual storytelling, and internet
-            culture overlap. That perspective shapes how I approach creative AI production —
-            building experiences that are both functional and emotionally engaging.
+            At DevCatalyst, a student-led innovation and tech community, I led the
+            graphic design and video editing team, working on event visuals, social
+            content, visual assets, and creative direction for the club's digital
+            presence. Alongside that, I co-created Ammonium_Cyanide, an educational meme
+            and content platform that grew to 40K+ followers and produced{" "}
+            <span style={{ color: "var(--brand-light)", fontWeight: 400 }}>
+              32+ viral reels
+            </span>{" "}
+            crossing 1M+ views.
+          </motion.p>
+
+          {/* Body paragraph 3 */}
+          <motion.p
+            variants={itemVariants}
+            className="text-base leading-relaxed"
+            style={{
+              fontFamily: "var(--app-font-body)",
+              fontWeight: 300,
+              color: "var(--text-secondary)",
+              lineHeight: 1.75,
+            }}
+          >
+            On the technical side, I enjoy building practical AI-driven systems and
+            interfaces. I’ve worked on projects ranging from an AI-based traffic
+            management system focused on solving real-world congestion problems to
+            recommendation systems, NLP tools, and interactive frontend experiences using
+            Python, Streamlit, and Hugging Face. I’m calm, detail-oriented, and slightly
+            perfectionistic about the things I create, and I’ve spent the last few years{" "}
+            <span style={{ color: "var(--brand-light)", fontWeight: 400 }}>
+              deliberately developing both my technical and creative instincts together
+            </span>
+            .
           </motion.p>
 
           {/* Stats */}
@@ -189,7 +215,7 @@ export default function About() {
 
         {/* ── RIGHT COLUMN — 2/5 ── */}
         <motion.div
-          className="lg:col-span-2 lg:pl-8 lg:border-l flex flex-col gap-5"
+          className="lg:col-span-2 lg:pl-8 lg:border-l flex flex-col gap-8"
           style={{ borderColor: "rgba(255,255,255,0.05)" }}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -268,56 +294,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Divider */}
-            <div style={{ height: "1px", backgroundColor: "var(--surface-border)" }} />
-
-            {/* Tool groups */}
-            <div className="flex flex-col gap-4">
-              <p
-                className="text-xs tracking-widest uppercase"
-                style={{
-                  fontFamily: "var(--app-font-mono)",
-                  color: "var(--text-muted)",
-                  letterSpacing: "0.18em",
-                  fontSize: "10px",
-                }}
-              >
-                Tools
-              </p>
-              {TOOL_GROUPS.map(({ label, tools }) => (
-                <div key={label}>
-                  <p
-                    className="mb-2"
-                    style={{
-                      fontFamily: "var(--app-font-mono)",
-                      fontSize: "9px",
-                      letterSpacing: "0.2em",
-                      textTransform: "uppercase",
-                      color: "rgba(255,255,255,0.2)",
-                    }}
-                  >
-                    {label}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="px-2.5 py-1 rounded-md text-xs"
-                        style={{
-                          fontFamily: "var(--app-font-mono)",
-                          backgroundColor: "rgba(255,255,255,0.04)",
-                          border: "1px solid var(--surface-border)",
-                          color: "var(--text-secondary)",
-                          letterSpacing: "0.02em",
-                        }}
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>

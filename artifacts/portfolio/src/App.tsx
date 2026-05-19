@@ -9,12 +9,14 @@ import About from "@/components/About";
 import CreativeWork from "@/components/CreativeWork";
 import Projects from "@/components/Projects";
 import Leadership from "@/components/Leadership";
+import Tools from "@/components/Tools";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import Loader from "@/components/Loader";
 import SectionDivider from "@/components/SectionDivider";
 import NotFound from "@/pages/not-found";
+import Work from "@/pages/Work";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +34,8 @@ function Home() {
       <SectionDivider />
       <Leadership />
       <SectionDivider />
+      <Tools />
+      <SectionDivider />
       <Contact />
       <Footer />
     </main>
@@ -42,6 +46,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/work" component={Work} />
       <Route component={NotFound} />
     </Switch>
   );

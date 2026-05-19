@@ -24,7 +24,7 @@ export default function Footer() {
             color: "var(--text-muted)",
           }}
         >
-          © 2025 Ajay Puttam. Built with React &amp; Framer Motion.
+          © 2026 Ajay Puttam. Built with React &amp; Framer Motion.
         </p>
 
         {/* Center */}
@@ -35,7 +35,7 @@ export default function Footer() {
             color: "var(--text-muted)",
           }}
         >
-          Creative AI Technologist · Hyderabad, India
+          Creative Technologist · Hyderabad, India
         </p>
 
         {/* Right: social icons */}

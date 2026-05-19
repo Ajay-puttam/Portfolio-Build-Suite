@@ -1,21 +1,21 @@
 const SKILLS = [
   "AI Visual Design",
   "Video Editing",
-  "Prompt Engineering",
+  "Graphic Design",
   "NLP",
   "Branding",
   "Social Media",
   "Reels",
-  "UGC",
+  "Creative AI",
   "Streamlit",
   "HuggingFace",
   "Adobe Firefly",
   "CapCut",
   "Canva",
   "ElevenLabs",
-  "Content Systems",
+  "Alight Motion",
   "Viral Content",
-  "Motion Graphics",
+  "Digital Storytelling",
 ];
 
 function SkillItem({ label }: { label: string }) {

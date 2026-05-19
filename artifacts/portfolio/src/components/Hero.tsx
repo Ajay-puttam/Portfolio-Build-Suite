@@ -41,8 +41,8 @@ const rightItemVariants = {
 
 const SKILL_PILLS = [
   "AI Visual Systems",
-  "Cinematic Editing",
-  "Prompt Engineering",
+  "Video Editing",
+  "",
   "Digital Storytelling",
   "Creative Technology",
   "AI Tooling",
@@ -97,7 +97,7 @@ export default function Hero() {
                     animation: "glowPulse 3s ease-in-out infinite",
                   }}
                 />
-                Open to Work · Creative AI Roles
+                Open to Work · Creative & Tech Roles
               </span>
             </motion.div>
 
@@ -144,9 +144,7 @@ export default function Hero() {
                 lineHeight: 1.65,
               }}
             >
-              Design. AI. Internet culture.{" "}
-              <span style={{ color: "rgba(245,166,35,0.6)" }}>—</span>{" "}
-              I speak all three fluently.
+              Final Year CSE. Matrusri Engineering College. Hyderabad.{" "}
             </motion.p>
 
             {/* CTAs */}
@@ -155,19 +153,18 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-start justify-start gap-4 mt-2"
             >
               <a
-                href="#work"
+                href="/#work"
                 className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-[#F5A623] text-[#F5A623] bg-transparent hover:bg-[#F5A623] hover:text-[#0A0A0A]"
                 style={{ fontFamily: "var(--app-font-body)" }}
               >
                 View My Work
               </a>
               <a
-                href="/resume.pdf"
-                download
+                href="#contact"
                 className="group inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-[rgba(255,255,255,0.12)] text-[#666664] bg-transparent hover:border-[rgba(255,255,255,0.3)] hover:text-[#F0F0EC]"
                 style={{ fontFamily: "var(--app-font-body)" }}
               >
-                Download Resume
+                Contact Me
                 <span className="ml-1 inline-block transition-transform duration-200 group-hover:translate-x-1">
                   →
                 </span>
@@ -183,13 +180,13 @@ export default function Hero() {
                 color: "var(--text-muted)",
               }}
             >
-              40K+ Followers
+              DevCatalyst Creative Lead
               <span style={{ color: "rgba(245,166,35,0.5)", margin: "0 6px" }}>·</span>
-              5M+ Views
+              40K+ Audience Reach
               <span style={{ color: "rgba(245,166,35,0.5)", margin: "0 6px" }}>·</span>
               AI Projects
               <span style={{ color: "rgba(245,166,35,0.5)", margin: "0 6px" }}>·</span>
-              DevCatalyst Lead
+              Hyderabad
             </motion.p>
           </motion.div>
         </div>
@@ -355,7 +352,7 @@ export default function Hero() {
                     marginBottom: "6px",
                   }}
                 >
-                  CONTENT
+                  VIRAL CONTENT
                 </p>
                 <p
                   style={{
@@ -366,7 +363,7 @@ export default function Hero() {
                     lineHeight: 1.1,
                   }}
                 >
-                  5M+
+                  32+
                 </p>
                 <p
                   style={{
@@ -376,7 +373,7 @@ export default function Hero() {
                     marginTop: "2px",
                   }}
                 >
-                  views generated
+                  1M+ views · viral reels on Ammonium Cyanide page
                 </p>
               </div>
             </motion.div>
