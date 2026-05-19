@@ -1,0 +1,12 @@
+{
+    "buildCommand": "cd artifacts/portfolio && pnpm install && pnpm build",
+    "outputDirectory": "artifacts/portfolio/dist",
+    "installCommand": "pnpm install",
+    "framework": null,
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
