@@ -153,7 +153,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-start justify-start gap-4 mt-2"
             >
               <a
-                href="/#work"
+                href="#work"
                 className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-[#F5A623] text-[#F5A623] bg-transparent hover:bg-[#F5A623] hover:text-[#0A0A0A]"
                 style={{ fontFamily: "var(--app-font-body)" }}
               >
